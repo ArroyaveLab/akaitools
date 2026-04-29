@@ -11,6 +11,8 @@
 [![Tests](https://github.com/dogusariturk/akaitools/actions/workflows/tests.yml/badge.svg)](https://github.com/dogusariturk/akaitools/actions/workflows/tests.yml)
 [![Lint](https://github.com/dogusariturk/akaitools/actions/workflows/lint.yml/badge.svg)](https://github.com/dogusariturk/akaitools/actions/workflows/lint.yml)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19874850.svg)](https://doi.org/10.5281/zenodo.19874850)
+
 `akaitools` parses output files from [AkaiKKR](http://kkr.issp.u-tokyo.ac.jp/), a Korringa–Kohn–Rostoker (KKR) Green's function code for electronic structure calculations. It turns raw text output into structured, fully typed Python objects without any manual text wrangling.
 
 <p>
@@ -24,13 +26,13 @@
 
 ## Key features
 
-- Parse **SCF**, **DOS**, and **BSF** output files with a single function call (`parse_go`, `parse_dos`, `parse_spc`)
+- Parse SCF, DOS, and BSF output files with a single function call (`parse_go`, `parse_dos`, `parse_spc`)
 - Spin-resolved DOS with direct access via `spin_up`, `spin_down`, `get_component()`, and `select()`
 - Bloch Spectral Function intensity matrix with k-path high-symmetry labels
 - Export any result to a pandas DataFrame for downstream analysis
 - Built-in Matplotlib plotting for DOS and SCF convergence
 - Command-line interface for quick summaries and JSON export
-- Generate AkaiKKR **input files** from scratch or from any parsed result with `InputFile`
+- Generate AkaiKKR input files from scratch or from any parsed result with `InputFile`
 - Fully typed: all models are standard Python `dataclass` objects
 
 ---
@@ -147,3 +149,24 @@
     scf = parse_go("calculation.out")
     InputFile.from_result(scf, mode="dos").write("dos.in")
     ```
+
+---
+
+## Citation
+
+We are currently preparing a preprint for publication. If you use `akaitools` in your research, please cite the following:
+
+> Sarıtürk, D. (2026). akaitools. Zenodo. https://doi.org/10.5281/zenodo.19874850
+
+BibTeX:
+
+```bibtex
+@software{sariturk_2026_19874850,
+  author    = {Sarıtürk, Doğuhan},
+  title     = {akaitools},
+  year      = 2026,
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.19874850},
+  url       = {https://doi.org/10.5281/zenodo.19874850},
+}
+```

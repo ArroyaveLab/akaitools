@@ -11,6 +11,8 @@
 [![Tests](https://github.com/dogusariturk/akaitools/actions/workflows/tests.yml/badge.svg)](https://github.com/dogusariturk/akaitools/actions/workflows/tests.yml)
 [![Lint](https://github.com/dogusariturk/akaitools/actions/workflows/lint.yml/badge.svg)](https://github.com/dogusariturk/akaitools/actions/workflows/lint.yml)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19874850.svg)](https://doi.org/10.5281/zenodo.19874850)
+
 `akaitools` parses output files from [AkaiKKR](http://kkr.issp.u-tokyo.ac.jp/), a Korringa-Kohn-Rostoker (KKR) Green's function code for electronic structure calculations. It turns raw text output into structured, fully typed Python objects and can generate new AkaiKKR input files from scratch or from parsed results.
 
 <p>
@@ -197,4 +199,19 @@ This project is licensed under the GNU GPLv3 License. See [LICENSE](https://gith
 
 ## Citation
 
-We are currently preparing a preprint for publication.
+We are currently preparing a preprint for publication. If you use `akaitools` in your research, please cite the following:
+
+> Sarıtürk, D. (2026). akaitools. Zenodo. https://doi.org/10.5281/zenodo.19874850
+
+BibTeX:
+
+```bibtex
+@software{sariturk_2026_19874850,
+  author    = {Sarıtürk, Doğuhan},
+  title     = {akaitools},
+  year      = 2026,
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.19874850},
+  url       = {https://doi.org/10.5281/zenodo.19874850},
+}
+```
