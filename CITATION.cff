@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: akaitools
+version: 0.1.0
+date-released: "2026-04-28"
+license: GPL-3.0-or-later
+repository-code: "https://github.com/dogusariturk/akaitools"
+doi: 10.5281/zenodo.19874850
+url: "https://doi.org/10.5281/zenodo.19874850"
+abstract: "Python library for parsing AkaiKKR output files into typed Python objects, and for generating AkaiKKR input files from scratch or from existing results."
+authors:
+  - family-names: "Sarıtürk"
+    given-names: "Doğuhan"
+    email: dogu.sariturk@gmail.com
+    orcid: "https://orcid.org/0000-0003-0008-1165"
