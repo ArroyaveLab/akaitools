@@ -25,7 +25,7 @@
 
 ## Key features
 
-- Parse **SCF**, **DOS**, and **SPC/BSF** outputs with `parse_go()`, `parse_dos()`, and `parse_spc()`
+- Parse SCF, DOS, and SPC/BSF outputs with `parse_go()`, `parse_dos()`, and `parse_spc()`
 - Access spin-resolved DOS through `spin_up`, `spin_down`, `get_component()`, and `select()`
 - Read Bloch spectral function matrices with automatic spectral-data discovery and high-symmetry k-point labels
 - Work with frozen dataclass models backed by NumPy arrays, with eV conversion helpers on energy-bearing fields
