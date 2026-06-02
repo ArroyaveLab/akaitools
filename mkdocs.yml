@@ -7,7 +7,7 @@ repo_name: dogusariturk/akaitools
 theme:
   name: material
   logo: img/icon.svg
-  favicon: img/icon.svg
+  favicon: img/icon.png
   palette:
     - media: "(prefers-color-scheme)"
       scheme: slate
