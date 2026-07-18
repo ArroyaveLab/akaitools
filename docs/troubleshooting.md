@@ -146,7 +146,7 @@ Use the Fermi energy value from the corresponding SCF output when plotting DOS, 
 
 `plot_bsf` never raises for missing data; it renders a placeholder panel instead. This happens when:
 
-- `result.spectral_up` (or `spectral_down`) is `None` because the corresponding `*_up.spc` / `*_dn.spc` file could not be found, or exists but is **empty (0 bytes)** — `parse_spc()` treats a zero-byte data file the same as a missing one.
+- `result.spectral_up` (or `spectral_down`) is `None` because the corresponding `*_up.spc` / `*_dn.spc` file could not be found, or exists but is **empty (0 bytes)** (`parse_spc()` treats a zero-byte data file the same as a missing one).
 - The channel's `SpectralFunction.data` is `None` because `n_sym_points == 0` for that spin (no k-path was computed).
 - `spin="up"` (or `"down"`) was requested but that channel has no data at all.
 
@@ -158,7 +158,7 @@ Check `spc.spectral_up` / `spc.spectral_down` and their `.data` attribute before
 
 ### High-symmetry k-point tick labels look wrong or unlabeled
 
-Tick labels are mapped from the raw coordinate strings in `KMeshInfo.high_symmetry_indices` (e.g. `"(0 0 0)"` → `"Γ"`) using a small fixed lookup table covering the common cubic BZ points (`Γ`, `H`, `N`, `P`, `X`, `W`, `K`). A coordinate string outside that table is displayed verbatim instead of a symbol — this is not a bug, just an unrecognized/non-cubic label.
+Tick labels are mapped from the raw coordinate strings in `KMeshInfo.high_symmetry_indices` (e.g. `"(0 0 0)"` → `"Γ"`) using a small fixed lookup table covering the common cubic BZ points (`Γ`, `H`, `N`, `P`, `X`, `W`, `K`). A coordinate string outside that table is displayed verbatim instead of a symbol. This is not a bug, just an unrecognized/non-cubic label.
 
 ---
 

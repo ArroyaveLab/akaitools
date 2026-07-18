@@ -168,7 +168,7 @@ inp.write("fe_spc.in")
 ```
 
 !!! note
-    `KPoint.label` is for documentation only — it is not written to the AkaiKKR input file. High-symmetry labels appear in the `.spc` output after the calculation runs.
+    `KPoint.label` is for documentation only: it is not written to the AkaiKKR input file. High-symmetry labels appear in the `.spc` output after the calculation runs.
 
 ---
 
@@ -188,11 +188,11 @@ inp = InputFile.from_string(open("fe.in").read())
 ```
 
 !!! note
-    `to_string()` never writes `KPoint.label`, so labels cannot be recovered when parsing an SPC input with a k-path — every parsed `KPoint.label` is `None`. Coordinates round-trip exactly.
+    `to_string()` never writes `KPoint.label`, so labels cannot be recovered when parsing an SPC input with a k-path: every parsed `KPoint.label` is `None`. Coordinates round-trip exactly.
 
 `from_file()`/`from_string()` follow AkaiKKR's own free-format reading rules, not just the layout `to_string()` happens to write, so hand-written files parse too:
 
-- A leading title comment is optional — AkaiKKR itself has no concept of one.
+- A leading title comment is optional (AkaiKKR itself has no concept of one).
 - `bravais="aux"` or `"prv"` is supported: the three primitive vectors are read in place of `c/a`, `b/a`, and the lattice angles, and stored on `InputFile.primitive_vectors`.
 - `bzqlty` accepts either an integer mesh count or one of AkaiKKR's quality letter codes (`"t"`, `"l"`, `"m"`, `"h"`, `"u"`).
 - `magtyp` is a free string (e.g. `"kick3"`), not limited to `"mag"`/`"nmag"`.

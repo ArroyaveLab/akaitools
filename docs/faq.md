@@ -137,7 +137,7 @@ The Bloch Spectral Function intensity stored in `SpectralFunction.data` is in **
 
 ### Can I plot just one spin channel?
 
-Yes — pass `spin="up"` or `spin="down"` to `plot_bsf()` (`--spin up` / `--spin down` on the CLI). Leaving it as `None` plots both channels side by side when both are present, or falls back to a single panel when only one channel has data.
+Yes, pass `spin="up"` or `spin="down"` to `plot_bsf()` (`--spin up` / `--spin down` on the CLI). Leaving it as `None` plots both channels side by side when both are present, or falls back to a single panel when only one channel has data.
 
 ### What do the dashed vertical/horizontal lines in the BSF plot mean?
 
